@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ISORC — International Symposium on Object/Component/Service-oriented Real-time distributed Computing</title>
+<style>
+  :root {
+    --accent: #1a5276;
+    --accent-light: #2980b9;
+    --bg: #f7f9fb;
+    --text: #2c3e50;
+    --muted: #6c7a89;
+    --card-bg: #ffffff;
+    --border: #e1e8ed;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+  header {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+    color: #fff;
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2.2rem;
+    letter-spacing: 0.5px;
+  }
+  header p.tagline {
+    margin: 0;
+    font-size: 1.1rem;
+    opacity: 0.92;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  nav {
+    background: #ffffff;
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+    padding: 0.75rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  nav a {
+    color: var(--accent);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  nav a:hover { text-decoration: underline; }
+  main {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 4rem 1.5rem;
+  }
+  section { margin-bottom: 3rem; }
+  h2 {
+    color: var(--accent);
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 0.4rem;
+    font-size: 1.5rem;
+  }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem 1.75rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .coming-soon {
+    background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+    border: 1px solid #f5d76e;
+    border-radius: 10px;
+    padding: 1.75rem;
+    text-align: center;
+  }
+  .coming-soon h3 {
+    margin-top: 0;
+    color: #8a6d00;
+    font-size: 1.4rem;
+  }
+  .coming-soon .badge {
+    display: inline-block;
+    background: #d4ac0d;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    margin-bottom: 0.75rem;
+  }
+  .dna-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .dna-list li {
+    padding: 0.5rem 0 0.5rem 1.75rem;
+    position: relative;
+  }
+  .dna-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent-light);
+    font-weight: bold;
+  }
+  .topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 0.9rem;
+  }
+  .topic {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent-light);
+    border-radius: 6px;
+    padding: 0.85rem 1rem;
+    font-size: 0.95rem;
+  }
+  .topic strong { color: var(--accent); display: block; margin-bottom: 0.2rem; }
+  .topic.new strong::after {
+    content: " · NEW";
+    color: #c0392b;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .topic.updated strong::after {
+    content: " · UPDATED";
+    color: #1e8449;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .past-conf {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    padding: 0.65rem 1.4rem;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.15s ease;
+  }
+  .btn:hover { background: var(--accent-light); }
+  footer {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border);
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>ISORC</h1>
+  <p class="tagline">International Symposium on Object/Component/Service-oriented Real-time distributed Computing</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#topics">Topics</a>
+  <a href="#next">Next Conference</a>
+  <a href="#past">Past Conference</a>
+</nav>
+
+<main>
+
+  <section id="about">
+    <h2>About ISORC</h2>
+    <div class="card">
+      <p>
+        ISORC is a small, intimate, single-track conference focused on real-time and embedded
+        computing. Since its founding by Prof. Kane Kim, ISORC has built its reputation on a few
+        core attributes that we are committed to preserving as the conference series grows:
+      </p>
+      <ul class="dna-list">
+        <li><strong>Single-track format</strong> — every attendee sees every presentation, fostering cross-disciplinary conversation.</li>
+        <li><strong>Intimate scale</strong> — genuine networking, hallway conversations, and relationships that last well beyond the conference week. Our growth target is 50–80 attendees, not 200.</li>
+        <li><strong>Cultural and location awareness</strong> — every edition makes time for an excursion or cultural experience tied to its host location.</li>
+        <li><strong>Real-time and embedded computing core</strong> — AI/ML, IoT, automotive, aerospace, and medical applications are welcome when grounded in real-time constraints, timing analysis, or embedded system concerns.</li>
+        <li><strong>Emerging researcher pathway</strong> — short papers and the doctoral symposium track exist to nurture the next generation of researchers.</li>
+        <li><strong>Geographic rotation</strong> — the Americas, Europe, and Asia, ensuring ISORC reaches and grows research communities worldwide.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="topics">
+    <h2>Topic Areas</h2>
+    <p>
+      As part of our revitalization effort, ISORC's topic areas have been refreshed to reflect
+      modern real-time and embedded computing research — while keeping real-time constraints,
+      timing analysis, and embedded system concerns at the center of every contribution.
+    </p>
+    <div class="topics-grid">
+      <div class="topic">
+        <strong>Real-Time and Embedded System Architectures</strong>
+        Hardware/software co-design, RT operating systems, hypervisors for RT, time-predictable processors and memory, microcontroller and SoC platforms.
+      </div>
+      <div class="topic new">
+        <strong>ML/AI on the Edge with Timing Guarantees</strong>
+        TinyML scheduling, neural network inference WCET analysis, LLM inference on constrained hardware, RT-aware model compression, edge AI hardware (NPUs, GPUs) with determinism requirements.
+      </div>
+      <div class="topic new">
+        <strong>Medical IoT and Healthcare Embedded Systems</strong>
+        RT sensor fusion in medical devices, closed-loop control, wearable/implantable RT constraints, FDA/CE mark timing requirements, RT telemedicine.
+      </div>
+      <div class="topic updated">
+        <strong>Autonomous and Safety-Critical Systems</strong>
+        Autonomous vehicles and UAVs, RT perception and decision-making, ISO 26262 and DO-178C software timing, RT robotics.
+      </div>
+      <div class="topic updated">
+        <strong>Real-Time Communications and Networking</strong>
+        5G/6G URLLC, Time-Sensitive Networking (TSN), deterministic networking, V2X/C-V2X, RT protocols and QoS.
+      </div>
+      <div class="topic">
+        <strong>Distributed Real-Time Computing Infrastructures</strong>
+        RT cloud/edge/fog computing, RT containerization and orchestration, distributed RT middleware, digital twins with RT data pipelines.
+      </div>
+      <div class="topic">
+        <strong>Scheduling, Resource Management, and Timing Analysis</strong>
+        Static and dynamic scheduling, WCET analysis, mixed-criticality systems, RT task models, energy-aware RT scheduling.
+      </div>
+      <div class="topic">
+        <strong>Dependability, Fault Tolerance, and Resilience</strong>
+        Fault detection and recovery in RT systems, redundancy and failover, formal verification, RT DevOps/CI-CD, cybersecurity for RT embedded systems.
+      </div>
+      <div class="topic new">
+        <strong>Real-Time AI Certification and Formal Verification</strong>
+        Timing verification of ML components, formal methods for neural network safety, certification workflows for RT AI in safety-critical systems.
+      </div>
+      <div class="topic updated">
+        <strong>Sustainable and Green Real-Time Computing</strong>
+        Energy-aware scheduling, DVFS, power-constrained embedded systems, carbon-aware RT infrastructure.
+      </div>
+      <div class="topic">
+        <strong>Industry 4.0, Smart Manufacturing, and Cyber-Physical Systems</strong>
+        RT industrial control, CPS, industrial IoT, RT SCADA, digital factories.
+      </div>
+      <div class="topic">
+        <strong>Operating Systems, Middleware, and System Software</strong>
+        RT kernels (Linux RT, Zephyr, FreeRTOS), RTOS for multicore, middleware for distributed RT (DDS, ROS 2), RT hypervisors.
+      </div>
+      <div class="topic">
+        <strong>Real-Time Analytics and Stream Processing</strong>
+        Complex event processing, RT time-series analysis, online ML with latency constraints, stream correlation.
+      </div>
+      <div class="topic">
+        <strong>Case Studies and Industrial Applications</strong>
+        Empirical studies, deployment reports, and industrial experiences — all placing real-time constraints at the center of the contribution.
+      </div>
+    </div>
+  </section>
+
+  <section id="next">
+    <h2>Next Conference</h2>
+    <div class="coming-soon">
+      <span class="badge">Coming Soon</span>
+      <h3>ISORC 2027 — IIT Ropar, India</h3>
+      <p>
+        ISORC heads to India for the first time as part of our Asia rotation, hosted at
+        <strong>IIT Ropar</strong> in <strong>March 2027</strong> (exact dates to be announced).
+        This marks a significant milestone for the conference as we continue to grow our
+        community in traditionally under-represented regions.
+      </p>
+      <p>Details, the call for papers, and important dates will be posted here as they are finalized.</p>
+    </div>
+  </section>
+
+  <section id="past">
+    <h2>Past Conference</h2>
+    <div class="card past-conf">
+      <div>
+        <strong>ISORC 2026</strong><br>
+        <span style="color: var(--muted);">Programme, committees, and proceedings information for the most recent edition.</span>
+      </div>
+      <a class="btn" href="https://mcscert.github.io/isorc2026/" target="_blank" rel="noopener">Visit ISORC 2026 Site</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>IEEE ISORC — International Symposium on Object/Component/Service-oriented Real-time distributed Computing</p>
+  <p>Maintained by the ISORC Steering Committee · <a href="mailto:rpettit@gmu.edu">Contact</a></p>
+</footer>
+
+</body>
+</html>
